@@ -1,0 +1,48 @@
+/*
+ * 两边左右float
+ * 中间放最后
+ * 避免使用clean：both等样式
+ * 
+ */
+
+.box-main{
+	overflow: auto;
+	background-color: #eee;
+}
+
+.box-logo{
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+	background-color: #999;
+}
+
+.box-left{
+	width: 200px;
+	height: 120px;
+	float: left;
+}
+
+.box-middle{
+	height: 300px;
+	margin: 20px 180px 0 240px;
+}
+
+.box-right{
+	width: 120px;
+	float: right;
+}
+
+.box-left, .box-right, .box-main {
+	margin: 20px;
+	border-color: #999;
+}
+
+.box-left,.box-middle, .box-right{
+	background-color: #fff;
+}
+
+h3{
+	margin-left: 90px;
+}
+

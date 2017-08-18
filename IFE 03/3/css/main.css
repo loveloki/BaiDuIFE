@@ -1,0 +1,54 @@
+/*
+ * margin负值法
+ * 首先，中间的主体要使用双层标签。
+ * 外层div宽度100%显示，并且浮动，内层div为真正的主体内容，含有左右margin值。
+ * 左栏与右栏都是采用margin负值定位的，左栏左浮动，margin-left为-100%（可用calc混合运算将左栏右移），由于前面的div宽度100%与浏览器，所以这里的-100%margin值正好使左栏div定位到了页面的左侧；
+ * 右侧栏也是左浮动，其margin-left也是负值。  
+ */
+
+
+.box-main{
+	overflow: auto;
+	background-color: #eee;
+}
+
+.box-logo{
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+	background-color: #999;
+}
+
+.box-left{
+	width: 200px;
+	height: 120px;
+	margin: 20px 20px 20px calc(-100% + 20px);
+}
+
+.box-middle{
+	margin: 20px 160px 0 240px;
+	background-color: #fff;
+}
+
+.box-right{
+	margin: 20px 20px 20px -140px;
+	right: 28px;
+	width: 120px;
+}
+
+.box-left, .box-right, .box-main {
+	border-color: #999;
+}
+
+.box-left,.box-middle-box, .box-right{
+	float: left;
+	background-color: #fff;
+}
+.box-middle-box{
+	background-color: #eee;
+}
+
+h3{
+	margin-left: 90px;
+}
+
